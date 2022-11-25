@@ -2,50 +2,120 @@
 <html>
   <head>
     <title>{% if page.title %}{{ page.title }} – {% endif %}{{ site.name }} – {{ site.description }}</title>
+    <link href="/" rel="canonical">
 
     {% include meta.html %}
 
-    <!--[if lt IE 9]>
-      <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&amp;display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/assets/styles/app.css" />
-    <link rel="alternate" type="application/rss+xml" title="{{ site.name }} - {{ site.description }}" href="{{ site.baseurl }}/feed.xml" />
+    <!-- Ionicons -->
+    <link href="https://unpkg.com/ionicons@4.5.0/dist/css/ionicons.min.css" rel="stylesheet">
 
-    <!-- Created with Jekyll Now - http://github.com/barryclark/jekyll-now -->
+    <link rel="stylesheet" href="{{ site.baseurl }}/assets/styles/app.css" />
   </head>
 
-  <body>
-    <div class="wrapper-masthead">
+  <body class="is-in stop-animations">
+    <header class="c-header">
       <div class="container">
-        <header class="masthead clearfix">
-          <a href="{{ site.baseurl }}/" class="site-avatar"><img src="{{ site.avatar }}" /></a>
-
-          <div class="site-info">
-            <h1 class="site-name"><a href="{{ site.baseurl }}/">{{ site.name }}</a></h1>
-            <p class="site-description">{{ site.description }}</p>
+        <div class="row">
+          <div class="c-header__inner">
+            <div class="logo">
+              <a class="logo__link" href="/">
+                SLALAM
+              </a>
+            </div>
+            <nav class="main-nav">
+              <div class="main-nav__box">
+                <div class="nav__icon-close">
+                  <i class="ion ion-md-close"></i>
+                </div>
+                <div class="nav__title">Menu</div>
+                  <ul class="nav__list list-reset">
+                    <li class="nav__item">
+                      <a class="nav__link active-link" href="/">Accueil</a>
+                    </li>
+                    <li class="nav__item">
+                      <a class="nav__link" href="/#projets">Projets</a>
+                    </li>
+                    <li class="nav__item">
+                      <a class="nav__link" href="/#contact">Contact</a>
+                    </li>
+                </ul>
+              </div>          
+              <div class="social">
+                <ul class="social__list list-reset">
+                  
+                  <li class="social__item">
+                    <a aria-label="twitter icon" class="social__link" href="https://twitter.com" rel="noopener" target="_blank"><i class="ion ion-logo-twitter"></i></a>
+                  </li>
+                  
+                  <li class="social__item">
+                    <a aria-label="github icon" class="social__link" href="https://github.com" rel="noopener" target="_blank"><i class="ion ion-logo-github"></i></a>
+                  </li>
+                  
+                  <li class="social__item">
+                    <a aria-label="pinterest icon" class="social__link" href="https://pinterest.com" rel="noopener" target="_blank"><i class="ion ion-logo-pinterest"></i></a>
+                  </li>
+                  
+                  <li class="social__item">
+                    <a aria-label="youtube icon" class="social__link" href="https://youtube.com" rel="noopener" target="_blank"><i class="ion ion-logo-youtube"></i></a>
+                  </li>
+                  
+                </ul>
+              </div>
+            </nav>
+            <div class="nav-button">
+              <i class="nav__icon nav__icon-menu ion ion-md-menu"></i>
+            </div>
           </div>
-
-          <nav>
-            <a href="{{ site.baseurl }}/">Blog</a>
-            <a href="{{ site.baseurl }}/about">About</a>
-          </nav>
-        </header>
+        </div>
       </div>
-    </div>
-
-    <div id="main" role="main" class="container">
-      {{ content }}
-    </div>
-
-    <div class="wrapper-footer">
+    </header>
+    {{ content }}
+    <div class="top" title="Top"><i class="ion ion-ios-arrow-up"></i></div>
+    <footer class="footer">
       <div class="container">
-        <footer class="footer">
-          {% include svg-icons.html %}
-        </footer>
+        <div class="row">
+          <div class="col col-12">   
+            <div class="social">
+              <ul class="social__list list-reset">
+                
+                <li class="social__item">
+                  <a aria-label="twitter icon" class="social__link" href="https://twitter.com" rel="noopener" target="_blank"><i class="ion ion-logo-twitter"></i></a>
+                </li>
+                
+                <li class="social__item">
+                  <a aria-label="github icon" class="social__link" href="https://github.com" rel="noopener" target="_blank"><i class="ion ion-logo-github"></i></a>
+                </li>
+                
+                <li class="social__item">
+                  <a aria-label="pinterest icon" class="social__link" href="https://pinterest.com" rel="noopener" target="_blank"><i class="ion ion-logo-pinterest"></i></a>
+                </li>
+                
+                <li class="social__item">
+                  <a aria-label="youtube icon" class="social__link" href="https://youtube.com" rel="noopener" target="_blank"><i class="ion ion-logo-youtube"></i></a>
+                </li>
+                
+              </ul>
+            </div>
+            <ul class="footer_nav list-reset">        
+              <li class="footer_nav__item">
+                <a class="footer_nav__link" href="/">Accueil</a>
+              </li>       
+              <li class="footer_nav__item">
+                <a class="footer_nav__link" href="/#projets">Projets</a>
+              </li>    
+              <li class="footer_nav__item">
+                <a class="footer_nav__link" href="/#contact">Contact</a>
+              </li> 
+            </ul>
+            <div class="copyright"><p> 2022 © <a href="/">SLALAM</a>. Réalisé par <a href="https://marsweb.fr/">Marsweb</a>.</p></div>
+          </div>
+        </div>
       </div>
-    </div>
-
-    {% include analytics.html %}
+    </footer>
+    <script src="{{ site.baseurl }}/assets/scripts/scripts.js"></script>
+    <script src="{{ site.baseurl }}/assets/scripts/common.js"></script>
   </body>
 </html>
