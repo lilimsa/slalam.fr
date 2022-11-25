@@ -2,17 +2,135 @@
 layout: default
 ---
 
-<div class="posts">
-  {% for post in site.posts %}
-    <article class="post">
+<section class="c-hero animate">
+  <div class="container">
+    <div class="row">
+      <div class="col col-12">
+        <div class="c-hero__inner">
 
-      <h1><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h1>
+          <div class="c-hero__left">
+            <h1 class="c-hero__title">Hi there, I am Salim Lalam</h1>
+            <div class="c-hero__description"><p><strong>Photographer</strong> and <strong>Visual Content Strategist</strong> from Albany. I work as a lifestyle, product, and landscape photographer, creating images for a diverse range of requests, from online media to printed artwork.</p></div>
+            <div class="c-hero__btn">
+              <a class="cta-button c-button c-button--primary c-button--small" href="#contact">Me contacter</a>
+              <a class="works-button c-button c-button--secondary c-button--small" href="#projects">
+                <span class="circle-bg"><i class="ion ion-md-arrow-down button-arrow"></i></span> Mes projets
+              </a>
+            </div>
+          </div>
 
-      <div class="entry">
-        {{ post.excerpt }}
+          <div class="c-hero__right">
+            <div class="c-hero__image">
+              <img alt="" loading="lazy" src="assets/images/photo.jpg">
+            </div>
+          </div>
+
+        </div>
       </div>
+    </div>
+  </div>
+</section>
 
-      <a href="{{ site.baseurl }}{{ post.url }}" class="read-more">Read More</a>
-    </article>
-  {% endfor %}
+<section class="section projects" id="projects">
+  <div class="container">
+    <div class="row">
+      <div class="col col-12">
+        <div class="contaniner__inner animate">
+          <div class="section__info">
+            <div class="section__head">
+              <h2 class="section__title">Mes Projets Récents</h2>
+            </div>
+            <div class="section__description"><p>I show only my best works built completely with passion, simplicity, and creativity!</p></div>
+          </div>
+          <div class="row">
+            <article class="c-project-card col col-4 col-d-6 col-t-12">
+              <div class="c-project-card__content">
+                <a class="c-project-card__image" href="/project/green-plant">
+                  <img alt="OUIGO" loading="lazy" src="assets/images/ouigo.png">
+                </a>
+                <div class="c-project-card__info">
+                  <div class="c-project-card__info-wrap">
+                    <h3 class="c-project-card__title">OUIGO</h3>
+                  </div>
+                  <div class="c-project-card__info-wrap">
+                    
+                    <div class="c-project-card__subtitle">POC</div>
+                    
+                  </div>
+                </div>
+              </div>
+            </article>
+            <article class="c-project-card col col-4 col-d-6 col-t-12">
+              <div class="c-project-card__content">
+                <a class="c-project-card__image" href="/project/antelope-anyon">
+                  <img alt="AIRFRANCE" loading="lazy" src="assets/images/airfrance.png">
+                </a>
+                <div class="c-project-card__info">
+                  <div class="c-project-card__info-wrap">
+                    <h3 class="c-project-card__title">AIRFRANCE</h3>
+                  </div>
+                  <div class="c-project-card__info-wrap">
+                    
+                    <div class="c-project-card__subtitle">POC</div>
+                    
+                  </div>
+                </div>
+              </div>
+            </article>           
+            <article class="c-project-card col col-4 col-d-6 col-t-12">
+              <div class="c-project-card__content">
+                <a class="c-project-card__image" href="/project/quiet-lake">
+                  <img alt="Quiet Lake" loading="lazy" src="assets/images/project-7.jpg">
+                </a>
+                <div class="c-project-card__info">
+                  <div class="c-project-card__info-wrap">
+                    <h3 class="c-project-card__title">Quiet Lake</h3>
+                  </div>
+                  <div class="c-project-card__info-wrap">
+                    
+                    <div class="c-project-card__subtitle">Photography</div>
+                    
+                  </div>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<div class="c-contact-form" id="contact">
+  <div class="container">
+    <div class="row">
+      <div class="col col-12">
+
+        <div class="c-contact-form__form-box">
+          <div class="c-contact-form__contact-head">
+            <h2 class="c-contact-form__contact-title">Me contacter</h2>
+            <p class="c-contact-form__contact-description">Merci de laisser un message ci-dessous pour me contacter. Je vous répondrai d'ici 24/48H.</p>
+          </div>
+          <form action="" class="c-contact-form__form" method="POST">
+            <input name="_to" type="hidden" value="site@example.com">
+            <div class="c-contact-form__form-group">
+              <label class="c-contact-form__form-label screen-reader-text" for="form-name">Nom Complet</label>
+              <input class="c-contact-form__form-input" id="form-name" name="name" placeholder="Your name..." required="" type="text">
+            </div>
+            <div class="c-contact-form__form-group">
+              <label class="c-contact-form__form-label screen-reader-text" for="form-email">Email</label>
+              <input class="c-contact-form__form-input" id="form-email" name="_replyto" placeholder="Your email..." required="" type="email">
+            </div>
+            <div class="c-contact-form__form-group">
+              <label class="c-contact-form__form-label screen-reader-text" for="form-text">Message</label>
+              <textarea class="c-contact-form__form-input" id="form-text" name="text" placeholder="Your message..." required="" rows="9"></textarea>
+            </div>
+            <div class="c-contact-form__form-group c-contact-form__form-group--button">
+              <button class="c-button c-button--primary c-button--large" type="submit">Laisser un message</button>
+            </div>
+          </form>
+        </div>
+
+      </div>
+    </div>
+  </div>
 </div>
