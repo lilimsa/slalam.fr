@@ -54,7 +54,7 @@ document.getElementById("contact-form").addEventListener("submit", async functio
   btn.textContent = "Envoi en cours...";
   status.style.display = "none";
   try {
-    await fetch("https://script.google.com/macros/s/REMPLACE_PAR_TON_URL/exec", {
+    await fetch("https://script.google.com/macros/s/AKfycbzvES-Rw3s_Wr5DKYEgPs2rmNVb8SYNQh11km2Am6Xxdmvkf2PBNl_fdDnI1YnNR25TSQ/exec", {
       method: "POST",
       mode: "no-cors",
       body: JSON.stringify(data)
