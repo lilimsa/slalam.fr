@@ -31,8 +31,46 @@ title: Contact
               <button class="c-button c-button--primary c-button--large" type="submit">Envoyer</button>
             </div>
           </form>
+          <div id="form-status" style="display:none;text-align:center;padding:24px;border-radius:8px;font-size:18px;font-weight:600;"></div>
         </div>
       </div>
     </div>
   </div>
 </div>
+
+<script>
+document.getElementById("contact-form").addEventListener("submit", async function(e) {
+  e.preventDefault();
+  const status = document.getElementById("form-status");
+  const form = this;
+  const btn = form.querySelector('button[type="submit"]');
+  const data = {
+    name: form.name.value,
+    email: form.email.value,
+    subject: form.subject.value,
+    message: form.message.value
+  };
+  btn.disabled = true;
+  btn.textContent = "Envoi en cours...";
+  status.style.display = "none";
+  try {
+    await fetch("https://script.google.com/macros/s/REMPLACE_PAR_TON_URL/exec", {
+      method: "POST",
+      mode: "no-cors",
+      body: JSON.stringify(data)
+    });
+    form.style.display = "none";
+    status.style.display = "block";
+    status.style.color = "#1495a7";
+    status.style.background = "#e6f4f6";
+    status.textContent = "Message envoyé avec succès ! Je vous répondrai dans les plus brefs délais.";
+  } catch (err) {
+    btn.disabled = false;
+    btn.textContent = "Envoyer";
+    status.style.display = "block";
+    status.style.color = "#e74c3c";
+    status.style.background = "#fde8e8";
+    status.textContent = "Une erreur est survenue. Veuillez réessayer ou me contacter via LinkedIn.";
+  }
+});
+</script>
